@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content = "IV's watch detail collection">
+    <meta name="Keywords" content = "IV' product page">
+    <meta name="author" content = "Gaurab">
+    <title>Product</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+    <!-- internal CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: white;
+            background-color: #081B29;
+        }
+
+        /* style for text in top */
+        .details {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 3%;
+            margin-top: 2%;
+        }
+
+        /* style for container in which content is stored */
+        .display_container {
+            height: max-content;
+            width: 95%;
+            margin: auto;
+            background-color: #142C3E;
+            margin-top: 3%;
+        }
+
+        /* style for table for navigation */
+        .product_heading {
+            margin: auto;
+            background-color: transparent;
+            width: 95%;
+            margin-bottom: 3%;
+        }
+
+        .product_heading th {
+            height: 40px;
+            background-color: #BFDBF7;
+            color: #000;
+            font-size: 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .product_heading th:hover {
+            text-decoration: underline;
+            background-color: #053c5e;
+            color: white;
+        }
+
+        /* style for container for data of product */
+        .product_data_outer {
+            background-color: #142C3E;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 2px solid white;
+            width: 95%;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+
+        .product_data {
+            height: 240px;
+            width: 100%;
+            background-color: transparent;
+            color: #fff;
+            font-size: 17px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* style for buy now button */
+        .buy_now {
+            width: 10%;
+            height: 10%;
+            border: none;
+            border-radius: 8px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #2A736B;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 3%;
+            align-self: flex-end;
+            margin-right: 2%;
+        }
+
+        .buy_now:hover {
+            background-color: #14413c;
+        }
+
+        .product_data p {
+            background-color: transparent;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .product_data div {
+            height: 85%;
+            width: 15%;
+            background-size: cover;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- code for navigation bar -->
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="home.html" class="logo_inner"></a>
+            </div>
+            <section class="nav_section">
+                <div class="home"><a href="../Html/home.html">Home</a></div>
+                <div class="About-us"><a href="../Html/aboutus.html">About US</a></div>
+                <div class="research"><a href="../Html/research.html">Research</a></div>
+                <div class="product"><a href="../Html/product.html">Product</a></div>
+                <div class="blog"><a href="../Html/blog.html">Blog</a></div>
+            </section>
+            <Button class="register"><a href="../Html/SignIn.html">Sign In</a></button>
+        </div>
+    </nav>
+    <section>
+        <!-- code for text in top -->
+        <p class="details">More to discover</p>
+        <!-- code for container for all display -->
+        <div class="display_container">
+            <br>
+            <!-- table for heading and category of product -->
+            <table class="product_heading">
+                <tr>
+                    <th>Model</th>
+                    <th style="width: 34%;">Image</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Rating</th>
+                </tr>
+            </table>
+
+            <!-- display for all product and its detail -->
+            <div class="product_data_outer">
+                <div class="product_data">
+                    <p style="margin-left: 5%;">Eclipse Chronos</p>
+                    <div style="background-image: url('../Image/w5.png');"></div>
+                    <p>NPR 12,500</p>
+                    <p>95 in stock</p>
+                    <p style="margin-right: 5%;">5 Stars</p>
+                </div>
+                <button class="buy_now" onclick="buyNow()">Buy Now</button>
+            </div>
+
+            <div class="product_data_outer">
+                <div class="product_data">
+                    <p style="margin-left: 5%;">Aurora Vanguard</p>
+                    <div style="background-image: url('../Image/w6.png');"></div>
+                    <p>NPR 22,900</p>
+                    <p>10 in stock</p>
+                    <p style="margin-right: 5%;">3.5 Stars</p>
+                </div>
+                <button class="buy_now" onclick="buyNow()">Buy Now</button>
+            </div>
+
+            <div class="product_data_outer">
+                <div class="product_data">
+                    <p style="margin-left: 5%;">Obsidian Horizon</p>
+                    <div style="background-image: url('../Image/w7.png');"></div>
+                    <p>NPR 9,050</p>
+                    <p>120 in stock</p>
+                    <p style="margin-right: 5%;">3 Stars</p>
+                </div>
+                <button class="buy_now" onclick="buyNow()">Buy Now</button>
+            </div>
+
+            <div class="product_data_outer">
+                <div class="product_data">
+                    <p style="margin-left: 5%;">Celestial Equinox</p>
+                    <div style="background-image: url('../Image/w8.png');"></div>
+                    <p>NPR 75,000</p>
+                    <p>5 in stock</p>
+                    <p style="margin-right: 5%;">4 Stars</p>
+                </div>
+                <button class="buy_now" onclick="buyNow()">Buy Now</button>
+            </div>
+
+            <div class="product_data_outer">
+                <div class="product_data">
+                    <p style="margin-left: 5%;">Shadow Meridian</p>
+                    <div style="background-image: url('../Image/w9.png');"></div>
+                    <p>NRP 39,999</p>
+                    <p>34 in stock</p>
+                    <p style="margin-right: 5%;">4.5 Stars</p>
+                </div>
+                <button class="buy_now" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-container" style="margin-top: 60px; background-color: #081B29;">
+        <div class="row">
+          <div class="footer-cols">
+            <img src="../Image/IV.png" alt="Logo" style="width: 50px;">
+            <div class="socials">
+              <a href="https://www.facebook.com/"><img src="../Image/facebook.png" alt="Logo" style="width: 30px;"></a>
+              <a href="https://www.linkedin.com/"><img src="../Image/linkedin.png" alt="Logo" style="width: 30px;"></a>
+              <a href="https://www.instagram.com/"><img src="../Image/instagram.png" alt="Logo" style="width: 30px;"></a>
+            </div>
+          </div>
+          <div class="footer-cols">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">New Watches</a></li>
+              <li><a href="#">Buy Now</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-cols">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Featured watches</a></li>
+              <li><a href="#">The Portal</a></li>
+              <li><a href="#">Watch Showcase</a></li>
+            </ul>
+          </div>
+          <div class="footer-cols">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">History</a></li>
+            </ul>
+          </div>
+          <div class="footer-cols">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Privacy and terms</a></li>
+              <li><a href="#">Directory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          © Copyright, Inc. 2025. We love our users!
+        </div>
+      </footer>
+    <!-- internal script to function buy now button -->
+    <script>
+        // function triggger when buy Now button is clicked
+        function buyNow() {
+            alert("Order Placed, Thank you for Buying");
+        }
+    </script>
+</body>
+
+</html>

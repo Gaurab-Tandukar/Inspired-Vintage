@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content="IV's team member contribution">
+    <meta name="Keywords" content="IV's members">
+    <meta name="author" content="Arshanav">
+
+    <!-- enternal css -->
+    <link rel="stylesheet" href="../Css/style.css" />
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+
+    <title>About US</title>
+    <!-- internal Css -->
+    <style>
+        /* styling for heading */
+        body {
+            background: #081B29;
+            color: white;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        .heading {
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+
+        .header-heading {
+            font-size: 70px;
+            color: #fff;
+        }
+
+        .header-desc {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        /* ---section one---  */
+        .section-one {
+            min-height: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        /* styling for container showing members */
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5 {
+            height: 600px;
+            width: 600px;
+            font-size: 40px;
+        }
+
+        .slide-container {
+            width: 100%;
+            padding: 0px;
+        }
+
+        .slide-content {
+            margin: 0 0px;
+        }
+
+        .card {
+            width: 600px;
+            border-radius: 50px;
+            background-color: #142C3E;
+
+        }
+
+        .image-content,
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            padding: 20px 15px;
+            align-items: flex-start;
+        }
+
+        .image-content {
+            row-gap: 5px;
+            position: relative;
+            row-gap: 5px;
+        }
+
+        .image-container {
+            min-height: 200px;
+            width: 100%;
+            padding: 20px;
+
+        }
+
+        .card-image {
+            margin-top: 0px;
+            margin-left: 50px;
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background: #FFF;
+
+
+
+        }
+
+        .card-image .card-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: 500px;
+            color: #FFF;
+            margin-top: 0px;
+            margin-left: 30px;
+        }
+
+        .para {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #fff;
+            margin-left: 30px;
+        }
+
+        /* styling for button */
+        .btn {
+            border: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            color: #FFF;
+            background-color: #2A736B;
+            border-radius: 6px;
+            margin: 14px;
+            cursor: pointer;
+            transition: all 0.3 ease-in;
+
+
+        }
+
+        .btn:hover {
+            background: #205A54;
+
+        }
+
+
+        /* ---section two--- */
+        .section-two {
+            min-height: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        /* ---section three--- */
+        .section-three {
+            min-height: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        /* ---feedback form--- */
+        /* ---feedback-heading--- */
+        .heading-two {
+            background: #e1e1df;
+            padding: 40px;
+        }
+
+        .feedback {
+            font-size: 70px;
+            color: #000;
+            padding-left: 50px;
+        }
+
+        .feedback-desc {
+            font-size: 30px;
+            color: #000;
+            padding-left: 50px;
+        }
+
+        /* ---code for white box--- */
+        .feedback-body {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 100px;
+            background: #e1e1df;
+        }
+
+        .feedback-form {
+            height: 640px;
+            width: 600px;
+            background-color: #fff;
+            padding: 25px;
+        }
+
+        .feedback-form p {
+            background-color: transparent;
+            color: black;
+            margin: 30px;
+        }
+
+        input {
+            width: 80%;
+            padding: 1.2%;
+            margin: 2%;
+            margin-top: 4%;
+            border: none;
+            color: black;
+            border: 1px solid rgb(30, 30, 30);
+
+        }
+
+        .submit-btn {
+            border: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            color: #FFF;
+            background-color: #2A736B;
+            border-radius: 6px;
+            margin: 14px;
+            cursor: pointer;
+            transition: all 0.3 ease-in;
+        }
+
+        .submit-btn:hover {
+            background: #205A54;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- code for navigation bar -->
+    <section class="section-nav">
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="home.html" class="logo_inner"></a>
+                </div>
+                <section class="nav_section">
+                    <div class="home"><a href="../Html/home.html">Home</a></div>
+                    <div class="About-us"><a href="../Html/aboutus.html">About US</a></div>
+                    <div class="research"><a href="../Html/research.html">Research</a></div>
+                    <div class="product"><a href="../Html/product.html">Product</a></div>
+                    <div class="blog"><a href="../Html/blog.html">Blog</a></div>
+                </section>
+                <Button class="register"><a href="../Html/SignIn.html">Sign In</a></button>
+            </div>
+        </nav>
+    </section>
+    <!-- code for heading text -->
+    <header class="heading">
+        <div class="content">
+            <h1 class="header-heading" align="center">About Us</h1>
+            <h2 class="header-desc" align="center">Meet the Team</h2>
+        </div>
+    </header>
+
+    <!-- code for the container to show details of the members -->
+    <section class="section-one">
+        <div class="box1">
+            <div class="slide-container">
+                <div class="slide-content">
+                    <div class="card">
+                        <div class="image-container">
+
+                            <div class="card-image">
+                                <img src="../Image/gaurav.png" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Gaurab Tandukar</h2>
+                            <p class="para">Team Leader </p>
+                            <p class="para">Gaurab is the Outstanding team leader of this group project who is the heart
+                                of the group with incredible leadership skills also responsible for making the product
+                                and sign up page.</p>
+                            <button class="btn"><a href="Gaurab.html" style="text-decoration: none;">Learn
+                                    More</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- code for the container to show details of the members -->
+        <div class="box2">
+            <div class="slide-container">
+                <div class="slide-content">
+                    <div class="card">
+                        <div class="image-container">
+                            <div class="card-image">
+                                <img src="../Image/dilip.png" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Dilip Shrestha</h2>
+                            <p class="para"> Team Associate</p>
+                            <p class="para">Dilip is an astounding associate and a valuable member of the group who
+                                organizes tasks efficiently and ensuring that deadlines are met, responsible for making
+                                the blog page.</p>
+                            <button class="btn"><a href="Dilip.html" style="text-decoration: none;">Learn
+                                    More</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- code for the container to show details of the members -->
+    <section class="section-two">
+        <div class="box3">
+            <div class="slide-container">
+                <div class="slide-content">
+                    <div class="card">
+                        <div class="image-container">
+                            <div class="card-image">
+                                <img src="../Image/suva.png" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Suvashish Shrestha</h2>
+                            <p class="para"> Team Associate </p>
+                            <p class="para">Suvashish is a noteworthy associate of the group with many contributions
+                                towards the development of this website, also responsible for creating the home page and
+                                research page.
+                            </p>
+                            <button class="btn"><a href="Suva.html" style="text-decoration: none;">Learn More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- code for the container to show details of the members -->
+        <div class="box4">
+            <div class="slide-container">
+                <div class="slide-content">
+                    <div class="card">
+                        <div class="image-container">
+                            <div class="card-image">
+                                <img src="../Image/arshnav.png" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Aarshnav KC</h2>
+                            <p class="para">Team Associate </p>
+                            <p class="para">Aarshnav is an admirable associate of the group with ability to collaborate
+                                with others and communicate clearly , responsible for making the about us and the
+                                portfolio page. </p>
+                            <button class="btn"><a href="Arshanav.html" style="text-decoration: none;">Learn
+                                    More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="section-three">
+        <div class="box4">
+            <div class="slide-container">
+                <div class="slide-content">
+                    <div class="card">
+                        <div class="image-container">
+                            <div class="card-image">
+                                <img src="../Image/bigya.jpg" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Bigya Neupane</h2>
+                            <p class="para"> Team Associate</p>
+                            <p class="para">Bigya is a valuable member of the group with great skills.</p>
+                            <button class="btn"><a href="Bigya.html" style="text-decoration: none;">Learn
+                                    More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- code for feedback form -->
+    <div class="heading-two">
+        <h1 class="feedback">Feedback Form</h1>
+        <p class="feedback-desc">This feedback form is intended to gather your thoughts on our new service to help us
+            improve.</p>
+    </div>
+    <section class="feedback-body">
+        <form name="messageform">
+            <div class="feedback-form">
+                <p> <input id="fname" type="text" name="firstname" placeholder=" Enter your First Name"> </p>
+                <p> <input id="lname" type="text" name="lastname" placeholder=" Enter your Last Name"></p>
+                <p><input id="email" type="email" name="email" placeholder="Enter your email"></p>
+                <p>Message:
+                    <br><textarea id="message" name="message" rows="10" cols="30"
+                        placeholder="Enter Message"></textarea>
+                </p>
+                <p><button onclick="validateForm()" class="submit-btn" style="width: 80%;">Submit</button></p>
+        </form>
+        </div>
+    </section>
+    <script>
+        function validateForm() {
+            // accessing element
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("fname").value;
+
+            // validating form
+            if(fname == "" || lname == "" || email == "" || message == "") {
+                alert("Empty field found, Please fill up details completely");
+            } 
+            else {
+                alert("Thank you for your feedback.");
+            }
+        }
+    </script>
+</body>
+
+</html>

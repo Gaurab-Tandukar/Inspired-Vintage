@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content="IV's watch detail collection">
+    <meta name="Keywords" content="IV' product page">
+    <meta name="author" content="Gaurab">
+    <title>Nova Precision Line | Product</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+    <!-- internal styling -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: white;
+            background-color: #081B29;
+        }
+
+        /* styling for arrow link to previous page */
+        .arrow {
+            height: 50px;
+            width: 50px;
+            rotate: 270deg;
+            border-radius: 50%;
+            background-image: url("../Image/arrow.png");
+            background-size: cover;
+            background-position: center;
+            margin-left: 3%;
+            margin-top: 2%;
+            background-color: transparent;
+            padding: 1%;
+        }
+        /* styling for main container to display information and picture */
+        .main {
+            margin: 60px auto;
+            height: 502px;
+            width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .product_container,
+        .product_detail {
+            height: 98%;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        /* styling for picture of the watch */
+        .product_photo {
+            height: 90%;
+            width: 60%;
+            background-image: url("../Image/q2.webp");
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+            border: 1px solid white;
+        }
+
+        .product_color {
+            margin-top: 2%;
+            height: 15%;
+            width: 60%;
+        }
+
+        .product_color p {
+            margin-bottom: 2%;
+            font-size: 20px;
+        }
+        /* styling for color option */
+        .color_option {
+            height: 60%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .color_option div {
+            height: 90%;
+            width: 10%;
+            border: 2px solid white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .color_option div:hover {
+            border: 2px solid rgb(154, 154, 154);
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #blue {
+            background-color: #00749d;
+        }
+
+        #brown {
+            background-color: #a52a2a99;
+        }
+
+        #silver {
+            background-color: silver;
+        }
+
+        /* styling for product detail */
+        .product_detail {
+            align-self: flex-start;
+            height: 430px;
+            border-top: 2px solid #2A736B;
+            border-bottom: 2px solid #2A736B;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+
+        .name {
+            font-size: 35px;
+            align-self: flex-start;
+            margin-left: 7%;
+            margin-top: 2%;
+            color: #2A736B;
+            background-color: transparent;
+        }
+
+        hr {
+            margin-top: 2%;
+            height: 2px;
+            width: 90%;
+            background-color: white;
+            border: none;
+            margin-bottom: 2%;
+            align-self: center;
+        }
+
+        .rating_box {
+            display: flex;
+            align-items: center;
+            margin-left: 10%;
+            align-self: flex-start;
+        }
+
+        .rating {
+            height: 30px;
+            width: 60px;
+            background-color: #2A736B;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 6px;
+            margin-top: 2%;
+        }
+
+        .rating a,
+        div {
+            background-color: transparent;
+            font-size: 20px;
+        }
+
+
+        .rating div {
+            height: 90%;
+            width: 45%;
+            background-image: url("../Image/star.png");
+            background-size: cover;
+        }
+
+        .rating_count {
+            margin-left: 5%;
+            font-size: 15px;
+            background-color: transparent;
+            color: #aaaaaa;
+        }
+
+        .s_price {
+            color: white;
+            font-size: 15px;
+        }
+
+        .price {
+            margin-left: 9%;
+            height: 50px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .origional_price {
+            font-size: 17px;
+            text-decoration: 2px solid red line-through;
+        }
+
+        .discount_price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .stock {
+            margin-left: 10%;
+        }
+
+        .stock span {
+            color: #2A736B;
+            background-color: transparent;
+        }
+
+        .buy {
+            margin-left: 10%;
+            height: 40px;
+            width: 300px;
+            border: none;
+            border-radius: 6px;
+            background-color: #2A736B;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .buy:hover {
+            background-color: #183e3a;
+            color: #e0dfdf;
+        }
+
+        .product_description {
+            height: 330px;
+            width: 100%;
+            margin: 10% auto 0 auto;
+            background-color: #e1e1df;
+            color: black;
+        }
+
+        .product_description p {
+            color: black;
+            background-color: transparent;
+            font-size: 40px;
+            margin-left: 5%;
+            font-weight: bold;
+        }
+
+        .UL {
+            margin-top: 2%;
+            width: 90%;
+            margin: auto;
+            color: #000;
+            background-color: transparent;
+            list-style: circle;
+            line-height: 40px;
+        }
+
+        .detail {
+            color: #000;
+            background-color: transparent;
+        }
+
+        img {
+            background-color: transparent;
+        }
+
+        .footer-container {
+            background-color: #081B29;
+        }
+    </style>
+</head>
+<body>
+    <!-- link to previous page -->
+    <a href="product.html">
+        <div class="arrow"></div>
+    </a>
+    <section>
+        <!-- styling for product container -->
+        <div class="main">
+            <div class="product_container">
+                <div class="product_photo"></div>
+                <div class="product_color">
+                    <p>Also available in </p>
+                    <!-- giving option for color -->
+                    <div class="color_option">
+                        <div id="green"></div>
+                        <div id="blue"></div>
+                        <div id="brown"></div>
+                        <div id="silver"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- code to display product detail -->
+            <div class="product_detail">
+                <p class="name">Nova Precision Line</p>
+                <hr>
+                <div class="rating_box">
+                    <div class="rating">
+                        <a style="color: white;">4.8</a>
+                        <div></div>
+                    </div>
+                    <a class="rating_count">9,000 ratings</a>
+                </div>
+                <div class="price">
+                    <p class="s_price">Special Price:</p>
+                    <div class="discount_price">NRP 40,040</div>
+                    <div class="origional_price">NRP 50,050</div>
+                </div>
+                <div class="stock">Hurry up only <span>4 in Stock</span></div>
+                <button class="buy" onclick="alert('Purchase Sucessful')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product_description">
+        <!-- code for product discription -->
+            <br>
+            <p>About this item</p>
+            <ul class="UL">
+                <li class="detail">Stainless Steel (band)</li>
+                <li class="detail">Emrald color clean look with stainless steel strap for comfortable wear for parties as well as casual wear</li>
+                <li class="detail">3 Year Limited Warranty. </li>
+                <li class="detail"> Water resistant to 100 Feet (30m); watches should be treated like jewelry; to best
+                    protect your watch, be sure to be conscious when spraying perfume, hair spray, etc.; a jewelry
+                    polishing cloth can be used to polish the watch and clean it of fingerprints</li>
+            </ul>
+        </div>
+    </section>
+    <!--Footer Container-->
+    <footer class="footer-container">
+        <div class="row">
+            <div class="footer-cols">
+                <img src="../Image/vv.png" alt="Logo" style="width: 50px;">
+                <div class="socials">
+                    <a href="https://www.facebook.com/"><img src="../Image/face.png" alt="Logo"
+                            style="width: 20px;"></a>
+                    <a href="https://www.linkedin.com/"><img src="../Image/link.png" alt="Logo"
+                            style="width: 20px;"></a>
+                    <a href="https://www.instagram.com/"><img src="../Image/video.png" alt="Logo"
+                            style="width: 20px;"></a>
+                </div>
+            </div>
+            <div class="footer-cols">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">New Watches</a></li>
+                    <li><a href="#">Buy Now</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-cols">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Featured watches</a></li>
+                    <li><a href="#">The Portal</a></li>
+                    <li><a href="#">Watch Showcase</a></li>
+                </ul>
+            </div>
+            <div class="footer-cols">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">History</a></li>
+                </ul>
+            </div>
+            <div class="footer-cols">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy and terms</a></li>
+                    <li><a href="#">Directory</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            © Copyright, Inc. 2025. We love our users!
+        </div>
+    </footer>
+</body>
+<!-- internal script -->
+<script>
+    // accesing color option
+    const green = document.getElementById("green");
+    const blue = document.getElementById("blue");
+    const brown = document.getElementById("brown");
+    const silver = document.getElementById("silver");
+    const pic = document.querySelector(".product_photo");
+
+    // adding event listener
+    green.addEventListener("click", () => {
+        pic.style.backgroundImage = "url('../image/q2.webp')";
+    });
+
+    blue.addEventListener("click", () => {
+        pic.style.backgroundImage = "url('../image/q3.webp')";
+    });
+
+    brown.addEventListener("click", () => {
+        pic.style.backgroundImage = "url('../image/q4.webp')";
+    });
+
+    silver.addEventListener("click", () => {
+        pic.style.backgroundImage = "url('../image/q5.webp')";
+    });
+
+</script>
+</html>

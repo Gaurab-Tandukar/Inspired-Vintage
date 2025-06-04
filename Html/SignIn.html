@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content = "IV's sign in page to login">
+    <meta name="Keywords" content = "IV's sign in">
+    <meta name="author" content = "Gaurab">
+    <title>Sign In</title>
+    <!-- External CSS -->
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        color: white;
+        background-color: #081B29;
+    }
+
+    /* code for the container of all content */
+    .signIn_body {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    /* code for text on top */
+    .signIn_text {
+        text-align: center;
+        font-weight: 300;
+        font-size: 44px;
+        margin-top: 2%;
+    }
+
+    .signIn_text2 {
+        text-align: center;
+        font-weight: 200;
+        font-size: 27px;
+        margin: 2%;
+    }
+
+    /* code for white box  */
+    .signIn_container {
+        height: 400px;
+        width: 540px;
+        background-color: #fff;
+        padding: 25px;
+    }
+
+    /* code for text inside if the box */
+    .signIn_container p {
+        background-color: transparent;
+        color: black;
+        font-weight: bold;
+        margin: 5% 0 8% 3%;
+    }
+
+    /* code for styling input text box */
+    input {
+        width: 45%;
+        background-color: transparent;
+        padding: 1.2%;
+        margin: 2%;
+        margin-top: 4%;
+        border: none;
+        color: black;
+        border: 1px solid rgb(30, 30, 30);
+    }
+
+    input:focus {
+        background-color: rgb(228, 228, 227);
+        border: 1px solid rgb(0, 221, 255);
+    }
+
+    /* code for styling link to forgot page and remember me button */
+    .signIn_password {
+        height: 30px;
+        width: 97%;
+        margin-left: auto;
+        background-color: transparent;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5%;
+    }
+
+    .signIn_password a {
+        background-color: transparent;
+        color: black;
+        font-size: 14px;
+    }
+
+    .remember_me {
+        width: 34%;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .remember_me input {
+        /* margin: 2%; */
+        /* padding: 0; */
+        width: fit-content;
+    }
+
+    .remember_me span {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 400;
+        width: 75%;
+        background-color: transparent;
+        color: black;
+        margin-left: 2%;
+    }
+
+    /* code for button styling */
+
+    .signIn_button {
+        margin-top: 10px;
+        height: 40px;
+        width: 130px;
+        background-color: #2C3E50;
+        color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+
+    .signIn_button:hover {
+        background-color: #1f2b37;
+
+    }
+
+    /* code for register account link styling */
+
+    .link_to_register {
+        display: block;
+        background-color: transparent;
+        color: black;
+        margin: 3%;
+    }
+</style>
+
+<body>
+    <!-- code for navigation bar -->
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="home.html" class="logo_inner"></a>
+            </div>
+            <section class="nav_section">
+                <div class="home"><a href="../Html/home.html">Home</a></div>
+                <div class="About-us"><a href="../Html/aboutus.html">About US</a></div>
+                <div class="research"><a href="../Html/research.html">Research</a></div>
+                <div class="product"><a href="../Html/product.html">Product</a></div>
+                <div class="blog"><a href="../Html/blog.html">Blog</a></div>
+            </section>
+            <Button class="register"><a href="../Html/SignIn.html">Sign In</a></button>
+        </div>
+    </nav>
+    <!-- code for text in top -->
+    <section class="signIn_body">
+        <h1 class="signIn_text">My Account</h1>
+        <p class="signIn_text2">If you are already registered with IV, login here:</p>
+
+        <!-- code for box to login -->
+        <form name="signIn_form" onsubmit="validateForm()">
+            <div class="signIn_container">
+                <p>Login to your account</p>
+                <input type="email" name="email" placeholder="Email Address" id="email" style="width: 95%;">
+                <br>
+                <input type="password" name="password" placeholder="password" id="password" style="width: 95%;">
+                <br>
+
+                <!-- code link to forgot password page -->
+                <div class="signIn_password">
+                    <a href="#">Forgot your password?</a>
+                    <div class="remember_me">
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </div>
+                </div>
+                <button class="signIn_button">sign In</button>
+
+                <!-- code for register account link -->
+                <a href="../Html/Register.html" class="link_to_register">Create Account?</a>
+            </div>
+        </form>
+    </section>
+
+    <!-- internal javascript -->
+    <script>
+        // function to validate form
+        function validateForm() {
+            let email = document.forms["signIn_form"]["email"].value;
+            let password = document.forms["signIn_form"]["password"].value;
+
+            if (email == "" || password == "") {
+                alert("Empty field found. please fill the form.");
+            }
+            else {
+                if (password.length < 5) {
+                    alert("Password must consist of more than 5 letters.");
+                }
+                else {
+                    alert("Signed In to your account");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

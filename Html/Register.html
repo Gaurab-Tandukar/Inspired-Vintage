@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content = "IV's register page to be a member">
+    <meta name="Keywords" content = "IV's register">
+    <meta name="author" content = "Gaurab">
+    <title>Register</title>
+    <!-- external css-->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+    <!-- internal Css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: white;
+            background-color: #081B29;
+        }
+
+        /* code for the container of all content */
+        .register_body {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        /* code for text on top */
+        .register_text {
+            text-align: center;
+            font-weight: 300;
+            font-size: 48px;
+            margin: 2%;
+        }
+
+        /* code for white box  */
+        .register_container {
+            height: 450px;
+            width: 540px;
+            background-color: #fff;
+            padding: 25px;
+        }
+
+        /* code for text inside if the box */
+        .register_container p {
+            background-color: transparent;
+            color: black;
+            font-weight: bold;
+            margin: 5% 0 3% 3%;
+        }
+
+        /* code for styling input text box */
+        input {
+            width: 45%;
+            background-color: transparent;
+            padding: 1.2%;
+            margin: 2%;
+            border: none;
+            color: black;
+            border: 1px solid rgb(30, 30, 30);
+        }
+
+        input:focus {
+            background-color: rgb(228, 228, 227);
+            border: 1px solid rgb(0, 221, 255);
+        }
+
+        #terms {
+            width: fit-content;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        center {
+            margin: auto;
+            background-color: #fff;
+            color: black;
+            display: flex;
+            justify-content: space-around;
+            width: 95%;
+        }
+
+        center p {
+            font-size: 12px;
+        }
+
+        /* code for button styling */
+
+        .register_button {
+            margin-top: 10px;
+            height: 40px;
+            width: 130px;
+            background-color: #2C3E50;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .register_button:hover {
+            background-color: #1f2b37;
+
+        }
+
+        .register_container {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- code for navigation bar -->
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="home.html" class="logo_inner"></a>
+            </div>
+            <section class="nav_section">
+                <div class="home"><a href="../Html/home.html">Home</a></div>
+                <div class="About-us"><a href="../Html/aboutus.html">About US</a></div>
+                <div class="research"><a href="../Html/research.html">Research</a></div>
+                <div class="product"><a href="../Html/product.html">Product</a></div>
+                <div class="blog"><a href="../Html/blog.html">Blog</a></div>
+            </section>
+            <Button class="register"><a href="../Html/SignIn.html">Sign In</a></button>
+        </div>
+    </nav>
+
+    <!-- code for text in top -->
+    <form>
+        <section class="register_body">
+            <h1 class="register_text">Ready to create a account ?</h1>
+            <div class="register_container">
+                <p>Sign up for a free account</p>
+                <form name="register_form">
+
+                    <!-- Getting details of customer -->
+                    <input type="text" placeholder="First Name" name="firstName" id="firstName">
+                    <input type="text" placeholder="last Name" name="lastName" id="lastName">
+                    <br>
+                    <input type="email" placeholder="Email Address" name="email" id="email" style="width: 95%;">
+                    <br>
+                    <input type="password" placeholder="Password" name="password" id="password" style="width: 95%;">
+                    <br>
+                    <center>
+                        <input type="checkbox" id="terms" checked>
+                        <p>
+                            I would also like to receive marketing information about IV’s products or services.
+                            We may send you this information using email.
+                        </p>
+                    </center>
+                    <br>
+                    <!-- button trigger JavaScript function -->
+                    <button class="register_button" onclick="formValidation()">Register</button>
+                </form>
+            </div>
+        </section>
+    </form>
+
+    <!-- internal JavaScript -->
+    <script>
+        function formValidation() {
+            // code to access form details
+            let Fname = document.getElementById("firstName").value;
+            let Lname = document.getElementById("lastName").value;
+            let Email = document.getElementById("email").value;
+            let Password = document.getElementById("password").value;
+
+
+            // code to validate form
+            if (Fname == "" || Lname == "" || Email == "" || Password == "") {
+                alert("Empty field found. please fill the form.");
+            }
+            else {
+                if (Password.length < 5) {
+                    alert("Password must consist of more than 5 letters");
+                }
+                else {
+                    alert("New Account Created");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

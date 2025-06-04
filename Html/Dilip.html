@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content = "IV's Dilip contribution">
+    <meta name="Keywords" content = "IV's members">
+    <meta name="author" content = "Arshanav">
+    <title>Dilip Shrestha</title>
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+    <link rel="stylesheet" href="CV.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: white;
+            background-color: #081B29;
+        }
+
+        /* styling for arrow link to previous page */
+        .arrow {
+            height: 50px;
+            width: 50px;
+            rotate: 270deg;
+            border-radius: 50%;
+            background-image: url("../Image/arrow.png");
+            background-size: cover;
+            background-position: center;
+            margin-left: 3%;
+            margin-top: 2%;
+            background-color: transparent;
+            padding: 1%;
+        }
+
+        /* styling for picture and detail container */
+        .top_container {
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        /* styling for profile pic */
+        .profile_pic {
+            height: 65%;
+            width: 25%;
+            /* background-color: red; */
+            border-radius: 50%;
+            background-image: url("../Image/dilip.png");
+            background-size: cover;
+            background-position: center;
+            margin-left: 8%;
+        }
+
+        /* styling for profile text */
+        .profile_detail {
+            height: 73%;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        /* styling for social links */
+        .social_links {
+            height: 60px;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .social_links a {
+            height: 100%;
+            width: 60px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #text {
+            height: 40px;
+            margin-top: 5%;
+            margin-left: 5%;
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: orangered;
+        }
+
+        /* styling for Details and skill of student */
+        .detail_outer_container {
+            height: 750px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .detail_inner_container {
+            height: 40%;
+            width: 45%;
+            border-radius: 20px;
+            background-color: #142C3E;
+        }
+
+        .detail_inner_container h3 {
+            margin-top: 3%;
+            background-color: transparent;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .detail_inner_container ul {
+            margin-top: 3%;
+            margin-left: 9%;
+            background-color: transparent;
+            font-size: 20px;
+        }
+
+        .detail_inner_container li {
+            background-color: transparent;
+            margin-bottom: 2%;
+        }
+
+        .detail_inner_container span {
+            background-color: transparent;
+        }
+
+        .detail_inner_container span:hover {
+            color: orangered;
+        }
+
+        .detail_inner_container a {
+            background-color: transparent;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .detail_inner_container a:hover {
+            color: orangered;
+        }
+
+        .skill_list li {
+            margin-bottom: 1%;
+        }
+
+        .skill_category {
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- link to previous page -->
+    <a href="aboutus.html">
+        <div class="arrow"></div>
+    </a>
+
+    <!-- picture section of the student -->
+    <section>
+        <div class="top_container">
+            <div class="profile_pic">
+
+            </div>
+            <div class="profile_detail">
+                <div>
+                    <p style="font-size: 50px;">I'm <span style="color: orangered;">Dilip Shrestha</span>,</p>
+                    <p style="font-size: 40px;">& I am a Student.</p>
+                </div>
+                <div class="social_links">
+                    <a href="https://www.facebook.com/profile.php?id=100084575973784"
+                        style="background-image: url('../Image/facebook.png'); height: 120%; width: 60px;"></a>
+                    <a href="https://www.instagram.com/i.amm_dilip?igsh=MXQ5YzJmZWoyODJ2Zw%3D%3D&utm_source=qr" style="background-image: url('../Image/instagram.png');"></a>
+                    <a href="https://www.linkedin.com/in/dilip-shrestha-b514b1308"
+                        style="background-image: url('../Image/linkedin.png');"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p id="text">More Details</p>
+    <!-- Details container of the Student -->
+    <section>
+        <div class="detail_outer_container">
+            <div class="detail_inner_container">
+                <h3>Details</h3>
+                <ul>
+                    <li><span>Name</span> : Dilip Shrestha</li>
+                    <li><span>Age</span> : 18</li>
+                    <li><span>Gender</span> : Male</li>
+                    <li><span>Location</span> : Dillibazar, Kathmandu</li>
+                    <li><span>Contact</span> : +977 9761799594</li>
+                </ul>
+            </div>
+
+            <div class="detail_inner_container">
+                <h3>Skills</h3>
+                <div class="skill_category">
+                    <ul class="skill_list"><a>Programming Skills</a>
+                        <li>C++</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Java</li>
+                    </ul>
+                    <ul class="skill_list" style="margin-right: 15%;"><a>MS Office Skills</a>
+                        <li>Word</li>
+                        <li>Powerpoint</li>
+                        <li>Excel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="detail_inner_container">
+                <h3>Education</h3>
+                <ul>
+                    <li><span>School</span> : NIC Academy, Sanobharyang, Kathmandu</li>
+                    <li><span>+2</span> : Kathmandu Model College, Bagbazar, Kathmandu</li>
+                    <li><span>Bachelors</span> : Islington College, Kamal Pokhari, Kathmandu</li>
+                </ul>
+            </div>
+
+            <div class="detail_inner_container">
+                <h3>Language</h3>
+                <ul>
+                    <li><span>Nepali</span></li>
+                    <li><span>English</span></li>
+                    <li><span>Hindi</span></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
+</html>

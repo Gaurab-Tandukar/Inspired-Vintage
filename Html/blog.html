@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content = "IV's blog done in The Impact of Technology in Watch Industry">
+    <meta name="Keywords" content = "IV's sign in">
+    <meta name="author" content = "Dilip">
+    <title>Blog</title>
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../Css/style.css"> 
+    <!-- intenal CSS -->
+    <style>
+        /* styling for body */
+        body {
+            background-color: #081B29;
+            color: white;
+            overflow-x: hidden;
+        }
+        .nav_section a {
+            color: white;
+        }
+
+        .register a {
+            color: white;
+        }
+        *{
+            text-decoration: none;
+        }
+        /* styling for bog containers */
+        .blog-container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        /* styling for blogs */
+        .blog1,
+        .blog2 {
+            margin-bottom: 20px;
+            color: White;
+            display: flex;
+            margin: 15px;
+        }
+
+        .blog1:hover {
+            background-color: hsl(206, 66%, 12%);
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            box-shadow: 5px 10px #0a2335;
+
+        }
+
+        .blog2:hover {
+            background-color: hsl(206, 66%, 12%);
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            box-shadow: 5px 10px #0a2335;
+
+        }
+        /* Styling for blog image */
+        .blog1 img {
+            width: 630px;
+            height: 350px;
+        }
+
+        .blog2 img {
+            width: 500px;
+            height: 350px;
+        }
+
+        .blog-aut1 img,
+        .blog-aut2 img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            position: relative;
+
+        }
+
+        .blog-abt {
+            margin-left: 20px;
+        }
+
+        .blog-abt button {
+            height: 40px;
+            width: 120px;
+            border: 2px solid black;
+            border-radius: 20px;
+
+        }
+
+        /* CSS code for Addtional Blogs */
+
+        .blog-container2 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+
+        .blog3 {
+            width: 380px;
+            height: 580px;
+            background-color: #D9D9D9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            cursor: pointer;
+        }
+
+
+        .blog3 img {
+            width: 100%;
+            height: 280px;
+            ;
+
+        }
+
+        .blog-abt3 {
+            padding: 10px;
+            color: black;
+        }
+
+        .blog-abt3 h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+
+        }
+
+
+        .blog-abt3 .btn {
+            position: relative;
+            display: inline-block;
+            height: 20px;
+            width: 110px;
+            text-align: center;
+            margin: 20px;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 25px;
+            text-decoration: none;
+            color: black;
+            left: 195px;
+
+
+        }
+
+        .btn:hover {
+            background-color: #081B29;
+            color: White;
+            transition: all 0.5s ease-in;
+
+        }
+
+        .row {
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Code for header-->
+    <header>
+        <!-- code for navigation bar -->
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="home.html" class="logo_inner"></a>
+                </div>
+                <section class="nav_section">
+                    <div class="home"><a href="../Html/home.html">Home</a></div>
+                    <div class="About-us"><a href="../Html/aboutus.html">About US</a></div>
+                    <div class="research"><a href="../Html/research.html">Research</a></div>
+                    <div class="product"><a href="../Html/product.html">Product</a></div>
+                    <div class="blog"><a href="../Html/blog.html">Blog</a></div>
+                </section>
+                <Button class="register"><a href="../Html/SignIn.html">Sign In</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- html code for background image  -->
+
+    <div class="back-img"
+        style="background-image: url('../Image/back2.png'); background-size: cover; width: 100%; height: 435px; position: relative; ">
+        <h1 style="color: White; text-align: center; position: relative; top: 40px; font-family: 'Lubalin-Demi',serif ">
+            Welcome to IV Blog Page! <br> Your Watch Journey: Read Anytime, Anywhere!</h1>
+    </div>
+
+    <!-- main section code  -->
+
+    <main>
+        <div class="popular">
+            <h1 style="color: white ; margin-top: 60px; text-align: center; font-size: 50px;">Popular Blogs</h1>
+            <!--Inline CSS-->
+        </div>
+
+        <!-- popular blog div code  -->
+
+        <div class="blog-container1">
+            <div class="blog1" style="flex-direction: row-reverse;">
+                <a href="../Html/read.html" style="color: white;">
+                    <img src="../Image/blogimg1.png" alt="Blog Image">
+                    <div class="blog-abt">
+                        <h2>The Impact of Technology in Watch Industry</h2>
+                        <p>Have you ever thought a day without a technology? No smartphone, computers, or even internet.
+                            It sounds insane, right? Nowadays technology has become one of the important thing in our
+                            lives, and we can't imagine a world without technology. From waking up from phone alarm to
+                            playing game with friends in phone, to chating with peoples.</p><br>
+                        <div class="blog-aut1">
+                            <img src="../Image/dilip.png" alt="">
+                            <p style="position: relative; bottom: 75px; left: 85px;">Dilip Shrestha <br> January 11, 2025
+                            </p>
+                        </div>
+                        <button><a href="../Html/read.html" style="color: black;">Read More</a></button>
+                    </div>
+                </a>
+
+            </div><br>
+
+            <div class="blog2">
+                <a href="read.html" style="color: white;">
+
+                    <img src="../Image/blogimg2.png" alt="Blog Image">
+                    <div class="blog-abt">
+                        <h2>Evolution of Watch Technology</h2>
+                        <p>Even though clocks has existed since the 13th century, the watch journey began from the 16th
+                            century with the invention of clock watches by Peter Henlein. From early mechanical watches
+                            to modern smartwatches, the transformation of timekeeping has been marked by significant
+                            milestones.</p><br>
+                        <div class="blog-aut1">
+                            <img src="../Image/customer-4.jpg" alt="Author Image">
+                            <p style="position: relative; bottom: 75px; left: 85px;">Ashish Shrestha <br> January 10,
+                                2025</p>
+                        </div>
+                        <button><a href="../Html/read.html" style="color: black;">Read More</a></button>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- HTML code for Additional Blogs -->
+
+        <div class="additional">
+            <h1 style="color: white ; margin-top: 60px; text-align: center; font-size: 50px;">Additional Blogs</h1>
+            <!--Inline CSS-->
+        </div>
+
+
+
+
+        <div class="blog-container2">
+            <div class="blog3">
+                <img src="../Image/add1.png" alt="">
+                <div class="blog-abt3">
+                    <h3>Top Fashion Watches to Elevate Your Style</h3>
+                    <p>Here are some of the top 5 fashion watches to elevvate yout style. 1. Rolex 2. Armani 3. Apple 4.
+                        Samsung 5. Casino</p>
+                    <a href="../Html/read.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog3">
+                <img src="../Image/add2.png" alt="">
+                <div class="blog-abt3">
+                    <h3>Best luxury waches for men under $1000 in 2025</h3>
+                    <p>In first week of 2025, list of best luxury watches for men under $1000 has just came out in the
+                        market. List are as follows:</p>
+                    <a href="../Html/read.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog3">
+                <img src="../Image/rolex.png" alt="">
+                <div class="blog-abt3">
+                    <h3>Rolex company has crossed valutation of $11 billion</h3>
+                    <p>Next breaking news has come out in watch industry. Rolex has just crossed valuation of $11
+                        Billion in the second week of 2025. </p>
+                    <a href="../Html/read.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog3">
+                <img src="../Image/add4.png" alt="">
+                <div class="blog-abt3">
+                    <h3>Insane rise of Smart watch in first week of 2025</h3>
+                    <p>Within a week of 2025, more than 1 million smart watch has been manufacture which is crazy
+                        number.</p>
+                    <a href="../Html/read.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog3">
+                <img src="../Image/add5.png" alt="">
+                <div class="blog-abt3">
+                    <h3>New year came with new WatchOS 11.2 in 2025</h3>
+                    <p>Apple has just released WatchOS 11.2 update in Apple Watch which come with awesome new features.
+                    </p>
+                    <a href="../Html/read.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog3">
+                <img src="../Image/add6.png" alt="">
+                <div class="blog-abt3">
+                    <h3>Watch Industry has been increased by 11%</h3>
+                    <p>As per the records of 2023 and 2024, it has been observed that watch market has been increased by
+                        11%.</p>
+                    <a href="../Html/read.html" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-container" style="margin-top: 60px; background-color: #081B29;">
+        <div class="row">
+          <div class="footer-cols">
+            <img src="../Image/IV.png" alt="Logo" style="width: 50px;">
+            <div class="socials">
+              <a href="https://www.facebook.com/"><img src="../Image/facebook.png" alt="Logo" style="width: 30px; background-color: #081B29;"></a>
+              <a href="https://www.linkedin.com/"><img src="../Image/linkedin.png" alt="Logo" style="width: 30px; background-color: #081B29;"></a>
+              <a href="https://www.instagram.com/"><img src="../Image/instagram.png" alt="Logo" style="width: 30px; background-color: #081B29;"></a>
+            </div>
+          </div>
+          <div class="footer-cols">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">New Watches</a></li>
+              <li><a href="#">Buy Now</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-cols">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Featured watches</a></li>
+              <li><a href="#">The Portal</a></li>
+              <li><a href="#">Watch Showcase</a></li>
+            </ul>
+          </div>
+          <div class="footer-cols">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">History</a></li>
+            </ul>
+          </div>
+          <div class="footer-cols">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Privacy and terms</a></li>
+              <li><a href="#">Directory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          © Copyright, Inc. 2025. We love our users!
+        </div>
+      </footer>
+</body>
+
+</html>

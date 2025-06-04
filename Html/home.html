@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="discription" content="watch collection">
+  <meta name="Keywords" content="Inspired Vintage">
+  <meta name="author" content="Suva">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>IV-Inspired Vintage</title>
+  <link rel="icon" type="image/png" href="../Image/vv.png">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 10px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-optical-sizing: auto;
+      background-color: #fff;
+      color: #fffffa;
+      font-size: 16px;
+      line-height: 1.5;
+      overflow: hidden;
+    }
+
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #142c3e;
+      /* Because we want header to be sticky later */
+      height: 96px;
+      padding: 0 48px;
+      position: relative;
+    }
+
+    .logo {
+      height: 22px;
+      /* 2.2rem */
+    }
+
+    /**************************/
+    /* NAVIGATION */
+    /**************************/
+
+    .main-nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: #fffffa;
+      font-weight: 500;
+      font-size: 18px;
+      /* 1.8rem */
+      transition: all 0.3s;
+    }
+
+    .main-nav-link:hover,
+    .main-nav-link:active {
+      color: teal;
+    }
+
+    .main-nav-link.nav-cta:link,
+    .main-nav-link.nav-cta:visited {
+      padding: 12px 24px;
+      /* top and bottom 12 px, right and left 24*/
+      border-radius: 9px;
+      color: #fff;
+      background-color: teal;
+    }
+
+
+
+    /**************************/
+    /* HERO SECTION */
+    /**************************/
+
+    .section-hero {
+      background-color: #142c3e;
+      padding: 48px 40px 96px 0;
+    }
+
+    .section-hero-2 {
+      background-color: #e1e1df;
+      padding: 34px 0 66px 124px;
+    }
+
+    .hero {
+      width: 1300px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      /* Changed to flex */
+      flex-direction: row;
+      /* Align items in a row */
+      gap: 96px;
+      /* gap between the flex items*/
+      align-items: center;
+      /* Center items vertically */
+
+    }
+
+    .hero-description {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+      padding: 5px;
+    }
+
+    .hero-description-2 {
+      color: #142c3e;
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+      padding-top: 30px;
+    }
+
+    .hero-2 {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .container {
+      margin: 40px 0 0 90px;
+      width: 82%;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      position: relative;
+    }
+
+    .container .image-wrapper {
+      position: relative;
+      width: 20%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+    }
+
+    .container .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container .image-wrapper:hover img {
+      transform: scale(1.15);
+      /* Smooth scaling effect */
+    }
+
+    .container .image-wrapper .hover-text {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fffffa;
+      font-size: 20px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+    }
+
+    .container .image-wrapper:hover .hover-text {
+      opacity: 1;
+      bottom: 20px;
+    }
+
+    .hero-banner {
+      display: block;
+      max-width: max-content;
+      margin-inline-end: -14%;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a,
+    img,
+    span,
+    button {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      height: auto;
+    }
+
+    button {
+      background: none;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    /*-----------------------------------*\
+    #REUSED STYLE
+    \*-----------------------------------*/
+
+    .container {
+      padding-inline: 16px;
+    }
+
+    /*** HERO*/
+
+    .hero-banner {
+      display: block;
+      margin-inline-end: -14%;
+    }
+
+    .hero .container {
+      display: flex;
+      /* Changed to flex */
+      flex-direction: row;
+      /* Align items in a row */
+      gap: 48px;
+      /* Maintain the gap */
+    }
+
+    .hero .title-md {
+      margin-block: 40px 60px;
+      /* start and end*/
+    }
+
+    /* Content Container Styling */
+    .custom-content-container {
+      text-align: center;
+      max-width: 1700px;
+      min-height: 790px;
+      background-color: #1a1a2e;
+    }
+
+    /* Custom Heading */
+    .custom-heading {
+      font-size: 35px;
+      text-align: left;
+      margin-bottom: 80px;
+      padding-top: 70px;
+      padding-left: 20px;
+      color: #fffffa;
+    }
+
+    /* Custom Table Styling */
+    .custom-table {
+      width: 100%;
+      border-spacing: 20px;
+      margin-bottom: 90px;
+    }
+
+    .custom-table-cell {
+      background-color: #fffffa;
+      padding: 20px;
+      border-radius: 10px;
+      /* vertical-align: top; */
+    }
+
+    /* Subheadings */
+    .custom-subheading {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    /* Paragraph Styling */
+    .custom-paragraph {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #000;
+      /* Soft Grayish Blue */
+    }
+
+    /* top right bottom left*/
+    .footer-container {
+      width: 1570px;
+      margin: auto;
+      padding: 20px 0;
+      /*top bottom right left*/
+      background-color: #12121e;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-cols {
+      width: 20%;
+      padding: 0 25px;
+      color: #ffffff;
+    }
+
+    .footer-cols h4 {
+      font-size: 16px;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .footer-cols ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-cols ul li a {
+      font-size: 14px;
+      color: #bbbbbb;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-cols ul li a:hover {
+      color: #ffffff;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .socials a:hover {
+      background-color: #ffffff;
+      color: #1a1a2e;
+    }
+
+    .bottom {
+      text-align: center;
+      padding: 20px 0;
+      color: #bbbbbb;
+      font-size: 14px;
+    }
+
+    .bottom span {
+      color: #ffffff;
+    }
+
+    #gallery-heading {
+      color: #142c3e;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+    }
+
+    .testimonials-container {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subheading {
+      font-size: 24px;
+      color: #555;
+    }
+
+    .heading-secondary {
+      font-size: 22px;
+      color: #222;
+    }
+
+    .testimonials {
+      width: 100%;
+      overflow: hidden;
+      /* Clear floats */
+    }
+
+    .testimonial {
+      width: 45%;
+      /* Each testimonial takes up 45% of the width */
+      margin: 2% 2.5%;
+      /* Add spacing between testimonials */
+      float: left;
+      /* Float testimonials to align them */
+      text-align: left;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      float: left;
+      /* Float image to the left */
+      margin-right: 15px;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      color: #555;
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    .testimonial-name {
+      font-size: 14.4px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /**************************/
+    /* GENERAL REUSABLE COMPONENTS */
+    /**************************/
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allow items to wrap */
+      gap: 102.4px;
+      /* Space between items */
+      margin-bottom: 153.6px;
+      /* Space below the flex container */
+    }
+
+    .heading-primary,
+    .heading-secondary,
+    .heading-tertiary {
+      color: #000;
+      letter-spacing: -0.5px;
+    }
+
+    .heading-primary {
+      line-height: 1.08;
+      margin-bottom: 70px;
+      font-size: 55px;
+      /* Adjust the size as needed */
+      font-weight: 400;
+      /* Use normal weight for a sleek look */
+      color: #ffffff;
+      /* White text color */
+      text-align: left;
+      /* Align text to the left */
+      line-height: 1.2;
+      /* Add spacing between lines */
+      margin: 0;
+      /* Remove default margins */
+      padding: 0;
+      /* Remove default padding */
+    }
+
+    .heading-secondary {
+      line-height: 1.08;
+      margin-bottom: 68px;
+      font-size: 91.2px;
+      /* Adjust the size as needed */
+      font-weight: 400;
+      /* Use normal weight for a sleek look */
+      color: #000;
+      /* Black text color */
+      text-align: left;
+      /* Align text to the left */
+      line-height: 1;
+      /* Add spacing between lines */
+      margin: 0;
+      /* Remove default margins */
+      padding: 0;
+      /* Remove default padding */
+    }
+
+    .heading-tertiary {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 52.8px;
+    }
+
+    .subheading {
+      display: block;
+      font-size: 25.6px;
+      font-weight: 500;
+      color: teal;
+      text-transform: uppercase;
+      margin-bottom: 25.6px;
+      letter-spacing: 0.75px;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 17.6px 31.2px;
+      border-radius: 9px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .btn--full:link,
+    .btn--full:visited {
+      background-color: teal;
+      color: #fff;
+    }
+
+    .btn--full:hover,
+    .btn--full:active {
+      background-color: teal;
+    }
+
+    .btn--outline:link,
+    .btn--outline:visited {
+      background-color: #fff;
+      color: #555;
+    }
+
+    .btn--outline:hover,
+    .btn--outline:active {
+      background-color: #fdf2e9;
+      box-shadow: inset 0 0 0 3px #fff;
+      /* Trick to add border inside */
+    }
+
+    .btn--form {
+      background-color: #45260a;
+      color: #fdf2e9;
+      align-self: end;
+      padding: 19.2px;
+    }
+
+    .btn--form:hover {
+      background-color: #fff;
+      color: #555;
+    }
+
+    .link:link,
+    .link:visited {
+      display: inline-block;
+      color: teal;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: all 0.3s;
+    }
+
+    .link:hover,
+    .link:active {
+      color: teal;
+      border-bottom: 1px solid transparent;
+    }
+
+    .list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 25.6px;
+    }
+
+    .list-item {
+      font-size: 28.8px;
+      display: flex;
+      align-items: center;
+      gap: 25.6px;
+      line-height: 1.2;
+    }
+
+    .list-icon {
+      width: 48px;
+      height: 48px;
+      color: teal;
+    }
+
+    .gallary {
+      display: inline-block;
+      border: 1px solid grey;
+      margin-bottom: 50px;
+      margin-top: -20px;
+      margin-left: 90px;
+      width: 18%;
+      height: 5%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .gallary .description {
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .blog_img:hover {
+      opacity: 0.9;
+      /* border: 1px solid hsl(0, 0%, 60%); */
+    }
+
+    .gallary img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* updated blog styling */
+    .blog_gallary {
+      height: 550px;
+      width: 100%;
+      /* background-color: #555; */
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .blog_container {
+      height: 80%;
+      width: 22%;
+      /* background-color: aqua; */
+      /* display: flex; */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 1px solid grey;
+    }
+
+    .blog_img {
+      height: 57%;
+      width: 100%;
+      /* background-color: #142c3e; */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .blog_discription {
+      padding-left: 4%;
+      width: 100%;
+      height: 43%;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      /* background-color: brown; */
+    }
+
+    .blog_topic {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .blog_discription button {
+      /* margin-top: 20px; */
+      width: fit-content;
+      border: 1px solid #142c3e;
+      padding: 10px;
+      display: inline-block;
+      font-size: 15px;
+      background-color: teal;
+      color: #fff;
+      border-radius: 8px;
+      align-self: flex-end;
+      margin-right: 5%;
+      /* margin-left: 160px; */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#">
+      <img src="../Image/vv.png" alt="Logo" style="width: 110px;">
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li>
+          <a class="main-nav-link" href="#">Home</a>
+        </li>
+        <li><a class="main-nav-link" href="aboutus.html">About Us</a></li>
+        <li><a class="main-nav-link" href="research.html">Research</a></li>
+        <li><a class="main-nav-link" href="product.html">Products</a></li>
+        <li>
+          <a class="main-nav-link" href="blog.html">Blog</a>
+        </li>
+        <li><a class="main-nav-link nav-cta" href="SignIn.html">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="section-hero">
+      <div class="hero">
+        <div class="hero-text-box">
+          <h1 class="heading-primary">
+            <b>Yesterday’s inspiration,</b> today’s masterpiece
+          </h1>
+          <p class="hero-description">
+            The IV-Inspirational Vintage Watch perfectly blends timeless elegance with heritage-inspired craftsmanship.
+            Classic in design, premium in materials, and with precision movement, it is a trusted companion in style on
+            every occasion. Each carries a story to tell, more than being a watch-a timeless treasure.
+          </p>
+          <a href="product.html" class="btn btn--full">Buy Now</a>
+
+          <a href="#gallery-heading" class="btn btn--outline">Learn more &darr;</a>
+          <div class="delivered-meals">
+          </div>
+        </div>
+        <figure class="hero-banner">
+          <img src="../Image/11.png" width="590" height="620" alt="hero banner" class="w-100" />
+        </figure>
+      </div>
+      </div>
+    </section>
+    <main>
+      <section class="section-hero-2" id="how">
+        <h1 class="heading-secondary">
+          Newly
+        </h1>
+        <h1 class="heading-secondary">
+          <b>Launched</b>
+        </h1>
+        <p class="hero-description-2">
+          <i>Inspirational Vintage Watch: Timeless elegance blends with heritage-inspired craftsmanship, featuring a
+            Classic design, premium materials, and precision movement make it a reliable and stylish companion for any
+            occasion. </i>
+        </p>
+        <div class="container">
+          <div class="image-wrapper">
+            <img src="../Image/1.png" alt="">
+            <div class="hover-text">WOMEN</div>
+          </div>
+          <div class="image-wrapper">
+            <img src="../Image/3.png" alt="">
+            <div class="hover-text">MEN</div>
+          </div>
+          <div class="image-wrapper">
+            <img src="../Image/2.png" alt="">
+            <div class="hover-text">TEEN</div>
+          </div>
+          <div class="image-wrapper">
+            <img src="../Image/4.png" alt="">
+            <div class="hover-text">COUPLE</div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <main>
+        <section class="section-hero">
+          <div class="hero">
+            <figure class="hero-banner">
+              <img src="../Image/10.png" width="590" height="620" alt="hero banner" class="w-100" />
+            </figure>
+            <div class="hero-text-box">
+              <h1 class="heading-primary" style="margin-left: 90px; margin-top: 120px;">
+                <b>VINTAGE</b> ERA
+              </h1>
+              <p class="hero-description">
+                <span style="font-size: 20px; margin-left:90px; margin-top: 10px;">Vintage collections: timeless
+                  Treasures that bring the soul of the past to the present, timeless treasures.
+                  That carries the soul of the past into the present.</span>
+              </p>
+              <a href="product.html" class="btn btn--full" style="margin-left:100px; margin-bottom: 250px;">Buy Now</a>
+            </div>
+          </div>
+          </div>
+        </section>
+      </main>
+      <h1 class="heading-primary" id="gallery-heading">
+        Explore Our, <b>Masterpiece</b>
+      </h1>
+      <div class="gallary">
+        <a href="product.html">
+          <img src="../Image/5.jpg" alt="" style="width: 100%;">
+        </a>
+        <div class="description" style="color: #000;">
+          <b>ChronoGears Vintage:</b>
+          <p style="padding-top: 10px; line-height: 1.6;">The elegance of watch to boost confidence. </p>
+          <a href="product.html" class="button"
+            style="margin-top: 20px; border: 1px solid #142c3e; padding: 10px; display: inline-block;font-size: 15px;  background-color: teal; color: #fff; border-radius: 8px; margin-left: 160px;">Buy
+            Now</a>
+        </div>
+      </div>
+      <div class="gallary">
+        <a href="product.html">
+          <img src="../Image/4.jpg" alt="">
+        </a>
+        <div class="description" style="color: #000;">
+          <b>Timeless Mariner</b>
+          <p style="padding-top: 10px; line-height: 1.6;">LA nautical-themed watch featuring a weathered leather strap
+          </p>
+          <a href="product.html" class="button"
+            style="margin-top: 20px; border: 1px solid #142c3e; padding: 10px; display: inline-block;font-size: 15px;  background-color: teal; color: #fff; border-radius: 8px; margin-left: 160px;">Buy
+            Now</a>
+        </div>
+      </div>
+      <div class="gallary">
+        <a href="product.html">
+          <img src="../Image/3.jpg" alt="">
+        </a>
+        <div class="description" style="color: #000;">
+          <b>Aurora Vanguard</b>
+          <p style="padding-top: 10px; line-height: 1.6;">Designs crafted to complement everyones confidence.</p>
+          <a href="product.html" class="button"
+            style="margin-top: 20px; border: 1px solid #142c3e; padding: 10px; display: inline-block;font-size: 15px;  background-color: teal; color: #fff; border-radius: 8px; margin-left: 160px;">Buy
+            Now</a>
+        </div>
+      </div>
+      <div class="gallary">
+        <a href="product.html">
+          <img src="../Image/2.jpg" alt="">
+        </a>
+        <div class="description" style="color: #000;"><b>Obsidian Horizon</b>
+          <p style="padding-top: 10px; line-height: 1.6;">Bold and timeless designs crafted for the modern gentleman.
+          </p>
+          <a href="product.html" class="button"
+            style="margin-top: 20px; border: 1px solid #142c3e; padding: 10px; display: inline-block;font-size: 15px;  background-color: teal; color: #fff; border-radius: 8px; margin-left: 160px;">Buy
+            Now</a>
+        </div>
+      </div>
+      <hr>
+      <!-- testimonial container -->
+      <div class="testimonials-container">
+        <span class="subheading" style="padding: 20px;">Testimonials</span>
+        <h2 class="heading-secondary" style="margin-bottom: 50px;">Once you try it, you can't go back</h2>
+        <div class="testimonials">
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="Photo of customer Dave Bryson" src="../Image/customer-1.jpg" />
+            <blockquote class="testimonial-text">
+              The brand is well recoginzed all over the world. I'm really satisfied with my purchase. I would
+              definetly recommend others to buy it.
+            </blockquote>
+            <p class="testimonial-name">&mdash; Dave Bryson</p>
+          </figure>
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="Photo of customer Ben Hadley" src="../Image/customer-2.jpg" />
+            <blockquote class="testimonial-text">
+              I'm thrilled with my purchase and the brand is known worldwide. I highly recommend it to others.
+            </blockquote>
+            <p class="testimonial-name">&mdash; Ben Hadley</p>
+          </figure>
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="Photo of customer Steve Miller" src="../Image/customer-3.jpg" />
+            <blockquote class="testimonial-text">
+              This product is fantastic! I'm very happy with my purchase and would definitely encourage others to buy
+              it.
+            </blockquote>
+            <p class="testimonial-name">&mdash; Steve Miller</p>
+          </figure>
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="Photo of customer Hannah Smith" src="../Image/customer-4.jpg" />
+            <blockquote class="testimonial-text">
+              I'm extremely satisfied with my purchase. The brand's global recognition speaks for itself. I recommend
+              it without hesitation.
+            </blockquote>
+            <p class="testimonial-name">&mdash; Hannah Smith</p>
+          </figure>
+        </div>
+      </div>
+      <!-- use of table to showcase our products knowledge -->
+      <div class="custom-content-container">
+        <h1 class="custom-heading">Where Timeless Elegance Meets Enduring Craftsmanship</h1>
+        <table class="custom-table">
+          <tr>
+            <td class="custom-table-cell">
+              <img src="../Image/clock.png" alt="" style="display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 50px;
+                   height:50px; 
+                   margin-bottom: 20px;">
+              <h2 class="custom-subheading">Timeless Design</h2>
+              <p class="custom-paragraph">Our watches have been designed with an ever-lasting sense of style, boasting a
+                classic
+                aesthetic that can blend with any era or occasion.
+              </p>
+            </td>
+            <td class="custom-table-cell">
+              <img src="../Image/prem.png" alt="" style="display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 50px;
+                   height:50px; 
+                   margin-bottom: 20px;">
+              <h2 class="custom-subheading">Premium Craftsmanship</h2>
+              <p class="custom-paragraph">Our timepieces are examples of scrupulous craftsmanship. Each piece is
+                handcrafted by skilled artisans to ensure the best quality and durability.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="custom-table-cell">
+              <img src="../Image/target.png" alt="" style="display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 50px;
+                   height:50px; 
+                   margin-bottom: 20px;">
+              <h2 class="custom-subheading">Precision Movement</h2>
+              <p class="custom-paragraph">At the heart of our watches is a commitment to precision. Whether powered
+                driven by mechanical engineering or quartz technology.From intricate detailing to heritage-inspired
+                design, each timepiece
+                It carries with it a unique character. </p>
+            </td>
+            <td class="custom-table-cell">
+              <img src="../Image/verified.png" alt="" style="display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 50px;
+                   height:50px; 
+                   margin-bottom: 20px;">
+              <h2 class="custom-subheading">Unique Identity</h2>
+              <p class="custom-paragraph">Every watch in our collection is more than just an accessory—a story.
+                waiting to be worn. From intricate detailing to heritage-inspired design, each timepiece
+                It carries with it a unique character. </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--  blog page reference-->
+      <h1 class="heading-primary" id="gallery-heading">
+        Explore our, <b>Blogs</b>
+      </h1>
+      
+      <section>
+        <div class="blog_gallary">
+          <a href="read.html" class="blog_container">
+            <div class="blog_img" style="background-image: url('../Image/main1.jpg');"></div>
+            <div class="blog_discription">
+              <p class="blog_topic">Impact of technology in Watch Technology</p>
+              <div class="blog_author">
+                <div>Dilip Shrestha</div>
+                <p>January 11, 2025</p>
+              </div>
+              <button>Read More</button>
+            </div>
+          </a>
+          <a href="read.html" class="blog_container">
+            <div class="blog_img" style="background-image: url('../Image/main2.jpg');"></div>
+            <div class="blog_discription">
+              <p class="blog_topic">Evolution of Watch Technology</p>
+              <div class="blog_author">
+                <div>Ashish Shrestha</div>
+                <p>January 10, 2025</p>
+              </div>
+              <button>Read More</button>
+            </div>
+          </a>
+          <a href="read.html" class="blog_container">
+            <div class="blog_img" style="background-image: url('../Image/main3.jpg');"></div>
+            <div class="blog_discription">
+              <p class="blog_topic">Insane Rise of Smart Watches</p>
+              <div class="blog_author">
+                <div>Jaydin Fernandez</div>
+                <p>November 21, 2024</p>
+              </div>
+              <button>Read More</button>
+            </div>
+          </a>
+          <a href="read.html" class="blog_container">
+            <div class="blog_img" style="background-image: url('../Image/main5.jpg');"></div>
+            <div class="blog_discription">
+              <p class="blog_topic">Top watches to elevate your style</p>
+              <div class="blog_author">
+                <div>Elise Mccall</div>
+                <p>June 19, 2024</p>
+              </div>
+              <button>Read More</button>
+            </div>
+          </a>
+        </div>
+      </section>
+      <main>
+        <section class="section-hero" style="background-color: #fff;">
+          <div class="hero">
+            <figure class="hero-banner">
+              <img src="../Image/team.png" width="590" height="620" alt="hero banner" class="w-100" />
+            </figure>
+            <div class="hero-text-box">
+              <h1 class="heading-primary" style="margin-left: 90px; margin-top: 120px; color:#000;">
+                GET TO <b>KNOW US</b>
+              </h1>
+              <p class="hero-description">
+                <span style="font-size: 20px; margin-left:90px; margin-top: 10px; color: #000;">Meet our fantastic team
+                  who contributed to make this website a massive success.</span>
+              </p>
+              <a href="aboutus.html" class="btn btn--full" style="margin-left:100px; margin-bottom: 250px;">Learn
+                More</a>
+            </div>
+          </div>
+          </div>
+        </section>
+        <div id="parent-container" style="position: relative;">
+          <div id="video-container" style="z-index: -1;">
+            <video autoplay loop muted style="width: 100%; height: 100%;">
+              <source id="mp4" src="../Image/11.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0px;">
+          </div>
+          <p style="font-size: 70px; position: absolute; top: 600px; left:150px; color: #fff;">Since 1830's</p>
+          <p style="font-size: 27px; position: absolute; top: 690px; left:150px; color: #fff;">In the watch business
+            creating one of the fine masterpiece's.</p>
+          <a href="research.html"
+            style=" text-decoration: overline; font-size: 20px; position: absolute; top: 740px; left:150px; color: #fff;">Vist
+            Research</a>
+        </div>
+        <!--Footer Container-->
+        <footer class="footer-container">
+          <div class="row">
+            <div class="footer-cols">
+              <img src="../Image/vv.png" alt="Logo" style="width: 50px;">
+              <div class="socials">
+                <a href="https://www.facebook.com/"><img src="../Image/face.png" alt="Logo" style="width: 20px;"></a>
+                <a href="https://www.linkedin.com/"><img src="../Image/link.png" alt="Logo" style="width: 20px;"></a>
+                <a href="https://www.instagram.com/"><img src="../Image/video.png" alt="Logo" style="width: 20px;"></a>
+              </div>
+            </div>
+            <div class="footer-cols">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">New Watches</a></li>
+                <li><a href="#">Buy Now</a></li>
+              </ul>
+            </div>
+            <div class="footer-cols">
+              <h4>Community</h4>
+              <ul>
+                <li><a href="#">Featured watches</a></li>
+                <li><a href="#">The Portal</a></li>
+                <li><a href="#">Watch Showcase</a></li>
+              </ul>
+            </div>
+            <div class="footer-cols">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">History</a></li>
+              </ul>
+            </div>
+            <div class="footer-cols">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Privacy and terms</a></li>
+                <li><a href="#">Directory</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom">
+            © Copyright, Inc. 2025. We love our users!
+          </div>
+        </footer>
+      </main>
+    </main>
+  </main>
+</body>
+
+</html>

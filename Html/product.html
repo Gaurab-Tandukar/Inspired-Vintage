@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="discription" content = "IV's watch detail collection">
+    <meta name="Keywords" content = "IV' product page">
+    <meta name="author" content = "Gaurab">
+    <title>Product</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="icon" type="image/png" href="../Image/vv.png">
+    <!-- <link rel="stylesheet" href="product.css"> -->
+
+    <!-- internal css for styling discounted product box -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: white;
+            background-color: #081B29;
+        }
+
+        /* code for navbar2 */
+        .navbar2 {
+            height: 70px;
+            display: flex;
+            align-items: end;
+            justify-content: space-evenly;
+        }
+
+        .navbar2 a {
+            text-decoration: none;
+            margin-right: 2%;
+        }
+
+        .top_sales {
+            font-size: 32px;
+            flex-grow: 1;
+            margin-left: 2%;
+        }
+
+        .cart {
+            display: flex;
+            margin-right: 3%;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        .cart:hover {
+            border: 1px solid white;
+        }
+
+        .cart_icon {
+            height: 40px;
+            width: 50px;
+            background-image: url("../Image/Cart_icon.png");
+            background-size: cover;
+        }
+
+        /* code for image slider */
+        .hero {
+            height: 450px;
+            width: 100%;
+            background-color: #142C3E;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .image_slider {
+            height: 80%;
+            width: 20%;
+            background-position: center;
+            background-size: cover;
+            background-color: transparent;
+            transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+        }
+
+        .image_slider:hover {
+            height: 83%;
+            width: 23%;
+            animation: enlarge 0.3s ease-in-out 0s 1;
+        }
+        @keyframes enlarge {
+            0% {
+                height: 80%;
+                width: 20%;
+            }
+            100%{
+                height: 83%;
+                width: 23%;
+            }
+        }
+        /* code for product display */
+        .main_container {
+            height: 500px;
+            width: 30%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 3%;
+            margin-top: 3%;
+            cursor: pointer;
+            animation: myanimation 1s ease 1 1;
+
+        }
+
+        .main_container p {
+            /* font-size: 32px; */
+            align-self: flex-start;
+            margin-left: 5%;
+            background-color: transparent;
+            color: #000;
+        }
+
+        .main_text1 {
+            font-size: 32px;
+            font-weight: bolder;
+        }
+
+        .main_text2 {
+            font-size: 21px;
+        }
+
+        .product_container {
+            height: 60%;
+            width: 90%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e8e6e6;
+            border-radius: 20px;
+        }
+
+        .product_container:hover {
+            background-color: #999999;
+        }
+
+        .product_catogery {
+            height: 90%;
+            width: 45%;
+            background-color: transparent;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        /* code for a advertisement */
+        .advertisement {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .advertisement div {
+            height: 450px;
+            width: 95%;
+            background-image: url("../Image/trial.jpg");
+            background-size: cover;
+            background-position: center;
+            margin-top: 3%;
+            border-radius: 3%;
+        }
+
+        .advertisement a {
+            margin-top: 2%;
+            font-size: 48px;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            text-decoration: none;
+        }
+
+        .advertisement a:hover {
+            text-decoration: 2px solid underline;
+        }
+
+        /* code for more product display */
+
+        .product_box_outer {
+            margin-top: 2%;
+            height: 520px;
+            /* cursor: pointer; */
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .product_box_inner {
+            height: 95%;
+            width: 30%;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        /* adding animation to product display */
+        @keyframes grow {
+            0% {
+                margin-bottom: 0%;
+            }
+
+            100% {
+                margin-bottom: 2%;
+            }
+        }
+
+        .product_box_inner:hover {
+            animation: grow 0.2s ease-in 0s 1 forwards;
+        }
+
+        .product_img {
+            height: 60%;
+            width: 45%;
+            border-radius: 20px;
+            background-color: #fff;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product_name {
+            background-color: transparent;
+            font-size: 19px;
+            color: #000;
+        }
+
+        .price {
+            background-color: transparent;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .add_to_cart {
+            width: 60%;
+            height: 10%;
+            border: none;
+            border-radius: 30px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #2A736B;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .add_to_cart:hover {
+            background-color: #14413c;
+
+        }
+
+        .product_details {
+            background-color: transparent;
+            color: black;
+            align-self: flex-end;
+            text-decoration: none;
+            margin-right: 10%;
+            font-size: 20px;
+        }
+
+        .product_details:hover {
+            text-decoration: underline;
+        }
+
+        .add_to_cart div {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            background-image: url("../Image/cat_icon_white.png");
+            background-size: cover;
+            background-color: transparent;
+        }
+
+        .add_to_cart a {
+            background-color: transparent;
+        }
+
+        .discount {
+            margin-left: 3%;
+            align-self: self-start;
+            font-size: 32px;
+            background-color: transparent;
+            color: red;
+            font-weight: bolder;
+        }
+
+        /* code for added to cart popup */
+        .cart_popup {
+            height: 50px;
+            width: 250px;
+            background-color: #142c3e;
+            border: 1px solid #14413c;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            left: 50%;
+            bottom: 15%;
+            transform: translate(-50%);
+            display: none;
+        }
+
+        .cart_popup_block {
+            height: 50px;
+            width: 250px;
+            background-color: #142c3e;
+            border: 1px solid #119026;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: sticky;
+            left: 50%;
+            bottom: 5%;
+            transform: translate(-50%);
+        }
+
+        .cart_popup_block p {
+            font-size: 20px;
+            background-color: transparent;
+        }
+
+        .cart_popup_block div {
+            height: 50px;
+            width: 50px;
+            background-image: url("../Image/tick.png");
+            background-size: cover;
+            background-color: transparent;
+        }
+
+        /* style to make background litle dimmer */
+        .dull {
+            opacity: 0.2;
+        }
+
+        /* styling for a container when hover or clicked in cart button */
+        .cart_container_display {
+            height: fit-content;
+            width: 476px;
+            background-color: white;
+            border: 3px solid #2A736B;
+            border-radius: 20px;
+            position: absolute;
+            top: 20%;
+            right: 5%;
+            color: #000;
+            padding: 3%;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .cart_container {
+            height: fit-content;
+            width: 476px;
+            background-color: white;
+            border: 3px solid #2A736B;
+            border-radius: 20px;
+            position: absolute;
+            top: 20%;
+            right: 5%;
+            color: #000;
+            padding: 3%;
+            text-align: center;
+            font-size: 24px;
+            display: none;
+        }
+
+        /* styling element inside cart container */
+        .box,
+        .cart_container_text {
+            height: fit-content;
+            border-bottom: 2px solid black;
+            color: black;
+            background-color: transparent;
+        }
+
+        .buy {
+            width: 30%;
+            height: 15%;
+            border: none;
+            border-radius: 6px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #2A736B;
+            text-align: center;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .buy:hover {
+            background-color: #14413c;
+
+        }
+
+        .outer_buy {
+            background-color: white;
+            display: flex;
+            justify-content: end;
+        }
+
+        .discounted_box {
+            height: 550px;
+        }
+
+        .discounted_img {
+            height: 60%;
+            width: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main_content">
+        <!-- code for navigation bar -->
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="home.html" class="logo_inner"></a>
+                </div>
+                <section class="nav_section">
+                    <div class="home"><a href="../Html/home.html">Home</a></div>
+                    <div class="About-us"><a href="../Html/aboutus.html">About US</a></div>
+                    <div class="research"><a href="../Html/research.html">Research</a></div>
+                    <div class="product"><a href="../Html/product.html">Product</a></div>
+                    <div class="blog"><a href="../Html/blog.html">Blog</a></div>
+                </section>
+                <Button class="register"><a href="../Html/SignIn.html">Sign In</a></button>
+            </div>
+        </nav>
+
+        <!-- code for cart and sales -->
+        <div class="navbar2">
+            <div class="top_sales">Top Sales</div>
+            <a>
+                <div class="cart">
+                    <div class="cart_text">Cart</div>
+                    <div class="cart_icon"></div>
+                </div>
+            </a>
+        </div>
+
+        <!-- code for image slider -->
+        <section>
+            <!-- lest to add slider -->
+            <div class="hero">
+                <div class="image_slider" style="background-image: url('../Image/IS1.png');"></div>
+                <div class="image_slider" style="background-image: url('../Image/IS2.png');"></div>
+                <div class="image_slider" style="background-image: url('../Image/IS3.png');"></div>
+                <div class="image_slider" style="background-image: url('../Image/IS4.png');"></div>
+            </div>
+        </section>
+
+        <!-- code for product display -->
+        <a style="cursor: default;" href="product2.html">
+            <div class="main">
+                <!-- add image and write category -->
+                <div class="main_container">
+                    <p class="main_text1">Vintage Watches</p>
+                    <p class="main_text2">Get into vintage Era</p>
+                    <div class="product_container">
+                        <div class="product_catogery" style="background-image: url('../Image/c1.png');"></div>
+                        <div class="product_catogery" style="background-image: url('../Image/c2.png');"></div>
+                    </div>
+                </div>
+
+                <div class="main_container">
+                    <p class="main_text1">Premium Watches</p>
+                    <p class="main_text2">Crafted to show Elegance.</p>
+                    <div class="product_container">
+                        <div class="product_catogery" style="background-image: url('../Image/c3.png');"></div>
+                        <div class="product_catogery" style="background-image: url('../Image/c4.png');"></div>
+                    </div>
+                </div>
+
+                <div class="main_container">
+                    <p class="main_text1">Classic Timepieces</p>
+                    <p class="main_text2">Classic watches blending with modern charm.</p>
+                    <div class="product_container">
+                        <div class="product_catogery" style="background-image: url('../Image/c5.png');"></div>
+                        <div class="product_catogery" style="background-image: url('../Image/c6.png');"></div>
+                    </div>
+                </div>
+
+                <div class="main_container">
+                    <p class="main_text1">Smart Watches</p>
+                    <p class="main_text2">Advance technology for everyday convenience.</p>
+                    <div class="product_container">
+                        <div class="product_catogery" style="background-image: url('../Image/w8.png');"></div>
+                        <div class="product_catogery" style="background-image: url('../Image/w7.png');"></div>
+                    </div>
+                </div>
+
+                <div class="main_container">
+                    <p class="main_text1">Male watch</p>
+                    <p class="main_text2">Bold and timeless designs crafted for the modern gentleman</p>
+                    <div class="product_container">
+                        <div class="product_catogery" style="background-image: url('../Image/c7.webp');"></div>
+                        <div class="product_catogery" style="background-image: url('../Image/c8.webp');"></div>
+                    </div>
+                </div>
+
+                <div class="main_container">
+                    <p class="main_text1">Female Watches</p>
+                    <p class="main_text2">Designs crafted to complement every woman's confidence.</p>
+                    <div class="product_container">
+                        <div class="product_catogery" style="background-image: url('../Image/c9.avif');"></div>
+                        <div class="product_catogery" style="background-image: url('../Image/c10.avif');"></div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- code for a advertisement -->
+        <div class="advertisement">
+            <div></div>
+            <a href="product2.html">One Click Away</a>
+        </div>
+
+        <!-- code for more product display -->
+        <div class="product_box_outer">
+            <div class="product_box_inner">
+                <div class="product_img" style="background-image: url('../Image/g1.png'); width: 70%;"></div>
+                <div class="product_name">Aspire AIO 2003X</div>
+                <div class="price">NRP 16,999</div>
+                <button class="add_to_cart">
+                    <a>Add To Cart</a>
+                </button>
+                <a href="watch1.html" class="product_details"> More details</a>
+            </div>
+
+            <div class="product_box_inner">
+                <div class="product_img" style="background-image: url('../Image/p30.png');"></div>
+                <div class="product_name">Infinity Stride</div>
+                <div class="price">NRP 20,000</div>
+                <button class="add_to_cart">
+                    <a>Add To Cart</a>
+                    <div></div>
+                </button>
+                <a href="watch2.html" class="product_details"> More details</a>
+            </div>
+        </div>
+
+        <div class="product_box_outer">
+            <div class="product_box_inner discounted_box">
+                <div class="discount">20%</div>
+                <div class="product_img discounted_img" style="background-image: url('../Image/q1.png');"></div>
+                <div class="product_name">Nova Precision Line</div>
+                <div class="price"><span class="price"
+                        style="text-decoration: line-through red; margin-right: 10px; font-size: 14px;">NRP
+                        50,050</span> <b class="price">NRP 40,040</b></div>
+                <button class="add_to_cart">
+                    <a>Add To Cart</a>
+                    <div></div>
+                </button>
+                <a href="watch3.html" class="product_details"> More details</a>
+            </div>
+
+            <div class="product_box_inner discounted_box">
+                <div class="discount">10%</div>
+                <div class="product_img discounted_img" style="background-image: url('../Image/a1.png');"></div>
+                <div class="product_name">Vertex Momentum</div>
+                <div class="price"><span class="price"
+                        style="text-decoration: line-through red; margin-right: 10px; font-size: 14px;">NRP
+                        29,500</span> <b class="price">NRP 26,550</b></div>
+                <button class="add_to_cart">
+                    <a>Add To Cart</a>
+                    <div></div>
+                </button>
+                <a href="../Html/watch4.html" class="product_details"> More details</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- code run when add to cart button is pressed -->
+    <div class="cart_popup">
+        <p>Added to cart</p>
+        <div></div>
+    </div>
+
+    <!-- code run when hover or clicked in cart button -->
+    <section>
+        <div class="cart_container">
+            <a class="cart_container_text" style="border: none; font-weight: 300;">
+                Looks like the cart is Empty!
+            </a>
+            <div class="outer_buy"><button class="buy">Buy</button></div>
+        </div>
+    </section>
+
+    <footer class="footer-container" style="margin-top: 60px; background-color: #081B29;">
+        <div class="row">
+          <div class="footer-cols">
+            <img src="../Image/IV.png" alt="Logo" style="width: 50px;">
+            <div class="socials">
+              <a href="https://www.facebook.com/"><img src="../Image/facebook.png" alt="Logo" style="width: 30px;"></a>
+              <a href="https://www.linkedin.com/"><img src="../Image/linkedin.png" alt="Logo" style="width: 30px;"></a>
+              <a href="https://www.instagram.com/"><img src="../Image/instagram.png" alt="Logo" style="width: 30px;"></a>
+            </div>
+          </div>
+          <div class="footer-cols">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">New Watches</a></li>
+              <li><a href="#">Buy Now</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-cols">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Featured watches</a></li>
+              <li><a href="#">The Portal</a></li>
+              <li><a href="#">Watch Showcase</a></li>
+            </ul>
+          </div>
+          <div class="footer-cols">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">History</a></li>
+            </ul>
+          </div>
+          <div class="footer-cols">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Privacy and terms</a></li>
+              <li><a href="#">Directory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          © Copyright, Inc. 2025. We love our users!
+        </div>
+      </footer>
+    <script src="../Js/product.js"></script>
+</body>
+
+</html>
